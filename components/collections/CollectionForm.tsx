@@ -21,7 +21,6 @@ import ImageUpload from "../custom ui/ImageUpload";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import Delete from "../custom ui/Delete";
-// import Delete from "../custom ui/Delete";
 
 const formSchema = z.object({
   title: z.string().min(2).max(20),
@@ -30,7 +29,7 @@ const formSchema = z.object({
 });
 
 interface CollectionFormProps {
-  initialData?: CollectionType | null;
+  initialData?: CollectionType | null; //Must have "?" to make it optional
 }
 
 const CollectionForm: React.FC<CollectionFormProps> = ({ initialData }) => {
